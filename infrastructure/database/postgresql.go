@@ -20,7 +20,7 @@ type psql struct {
 }
 
 func NewPsql(schema string) *psql {
-	connStr := fmt.Sprintf("postgresql://postgres:mysecretpassword@db:5432/postgres?search_path=%s&sslmode=disable", schema)
+	connStr := fmt.Sprintf("postgresql://postgres:mypassword@db:5432/postgres?search_path=%s&sslmode=disable", schema)
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		log.Critical("database: postgresql: open")
