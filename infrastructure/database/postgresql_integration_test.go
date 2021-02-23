@@ -110,7 +110,7 @@ func TestPsqlDelete(t *testing.T) {
 	type args struct {
 		job *Job
 	}
-	tests := []struct {
+	testsCases := []struct {
 		name string
 		args args
 		want int
@@ -258,7 +258,7 @@ func TestPsqlDelete(t *testing.T) {
 	measurement := "m7"
 	timestamp := time.Date(2018, 2, 16, 2, 16, 51, 0, time.UTC)
 	value := 0
-	for _, tt := range tests {
+	for _, tt := range testsCases {
 		t.Run(tt.name, func(t *testing.T) {
 			err := dbPsql.Delete(tt.args.job)
 			if err != nil {
@@ -301,7 +301,7 @@ func TestPsqlVersion(t *testing.T) {
 	type args struct {
 		product string
 	}
-	tests := []struct {
+	testsCases := []struct {
 		name string
 		args args
 		want []string
@@ -321,7 +321,7 @@ func TestPsqlVersion(t *testing.T) {
 			want: nil,
 		},
 	}
-	for _, tt := range tests {
+	for _, tt := range testsCases {
 		t.Run(tt.name, func(t *testing.T) {
 			got, err := dbPsql.Versions(tt.args.product)
 			if err != nil {
@@ -339,7 +339,7 @@ func TestPsqlAttributes(t *testing.T) {
 		product string
 		version string
 	}
-	tests := []struct {
+	testsCases := []struct {
 		name string
 		args args
 		want []string
@@ -369,7 +369,7 @@ func TestPsqlAttributes(t *testing.T) {
 			want: nil,
 		},
 	}
-	for _, tt := range tests {
+	for _, tt := range testsCases {
 		t.Run(tt.name, func(t *testing.T) {
 			got, err := dbPsql.Attributes(tt.args.product, tt.args.version)
 			if err != nil {
@@ -388,7 +388,7 @@ func TestPsqlNames(t *testing.T) {
 		version    string
 		attributes []string
 	}
-	tests := []struct {
+	testsCases := []struct {
 		name string
 		args args
 		want []string
@@ -430,7 +430,7 @@ func TestPsqlNames(t *testing.T) {
 			want: nil,
 		},
 	}
-	for _, tt := range tests {
+	for _, tt := range testsCases {
 		t.Run(tt.name, func(t *testing.T) {
 			got, err := dbPsql.Names(tt.args.product, tt.args.version, tt.args.attributes)
 			if err != nil {
@@ -450,7 +450,7 @@ func TestPsqlMeasurements(t *testing.T) {
 		attributes []string
 		name       string
 	}
-	tests := []struct {
+	testsCases := []struct {
 		name string
 		args args
 		want []string
@@ -506,7 +506,7 @@ func TestPsqlMeasurements(t *testing.T) {
 			want: nil,
 		},
 	}
-	for _, tt := range tests {
+	for _, tt := range testsCases {
 		t.Run(tt.name, func(t *testing.T) {
 			got, err := dbPsql.Measurements(tt.args.product, tt.args.version, tt.args.attributes, tt.args.name)
 			if err != nil {
@@ -529,7 +529,7 @@ func TestPsqlJobs(t *testing.T) {
 		lbound      time.Time
 		rbound      time.Time
 	}
-	tests := []struct {
+	testsCases := []struct {
 		name string
 		args args
 		want int
@@ -639,7 +639,7 @@ func TestPsqlJobs(t *testing.T) {
 			want: 0,
 		},
 	}
-	for _, tt := range tests {
+	for _, tt := range testsCases {
 		t.Run(tt.name, func(t *testing.T) {
 			jobs, err := dbPsql.Jobs(tt.args.product, tt.args.version, tt.args.attributes, tt.args.name, tt.args.measurement, tt.args.lbound, tt.args.rbound)
 			if err != nil {

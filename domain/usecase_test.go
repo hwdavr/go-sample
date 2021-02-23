@@ -1,6 +1,7 @@
 package domain_test
 
 import (
+	"fmt"
 	"testing"
 	"time"
 
@@ -13,6 +14,71 @@ import (
 var (
 	dbMem = database.NewMem()
 )
+
+func TestGetProduct(t *testing.T) {
+	use := NewUsecase(dbMem)
+	products, err := use.Products()
+	if err != nil {
+		t.Errorf("error occurred: %+v", err)
+	}
+	if len(products) == 0 {
+		t.Error("no product")
+	} else {
+		fmt.Println(fmt.Sprintf("Product size: %v", len(products)))
+	}
+}
+
+func TestGetVersion(t *testing.T) {
+	testCases := []struct {
+		product string
+		success bool
+	}{
+		{
+			product: "p1",
+			success: true,
+		},
+		{
+			product: "p2",
+			success: true,
+		},
+		{
+			product: "p3",
+			success: true,
+		},
+		{
+			product: "p4",
+			success: true,
+		},
+		{
+			product: "p5",
+			success: true,
+		},
+		{
+			product: "p6",
+			success: true,
+		},
+		{
+			product: "p7",
+			success: true,
+		},
+	}
+	use := NewUsecase(dbMem)
+	for _, tc := range testCases {
+		t.Run("", func(t *testing.T) {
+			versions, err := use.Versions(tc.product)
+			if tc.success {
+				if err != nil {
+					t.Errorf("error occurred: %+v", err)
+				}
+			} else {
+				if err == nil {
+					t.Errorf("error occurred: %+v", err)
+				}
+			}
+			fmt.Println(versions)
+		})
+	}
+}
 
 func TestUsecaseJobsMem(t *testing.T) {
 	use := NewUsecase(dbMem)
