@@ -8,7 +8,7 @@ import (
 	"github.com/julienschmidt/httprouter"
 	"github.com/pkg/errors"
 
-	"github.com/zitryss/perfmon/internal/log"
+	"github.com/hwdavr/perfmon/internal/log"
 )
 
 type html struct {

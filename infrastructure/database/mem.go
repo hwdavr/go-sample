@@ -10,8 +10,8 @@ import (
 	"sort"
 	"time"
 
-	. "github.com/zitryss/perfmon/domain"
-	. "github.com/zitryss/perfmon/internal/context"
+	. "github.com/hwdavr/perfmon/domain"
+	. "github.com/hwdavr/perfmon/internal/context"
 )
 
 type mem struct {

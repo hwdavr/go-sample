@@ -1,4 +1,4 @@
-module github.com/zitryss/perfmon
+module github.com/hwdavr/perfmon
 
 go 1.14
 

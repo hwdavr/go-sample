@@ -1,9 +1,9 @@
 # go-sample
 
-[![Build Status](https://travis-ci.org/zitryss/go-sample.svg?branch=master)](https://travis-ci.org/zitryss/go-sample)
-[![codecov](https://codecov.io/gh/zitryss/go-sample/branch/master/graph/badge.svg)](https://codecov.io/gh/zitryss/go-sample)
-[![Go Report Card](https://goreportcard.com/badge/github.com/zitryss/go-sample)](https://goreportcard.com/report/github.com/zitryss/go-sample)
-[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/zitryss/perfmon/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/hwdavr/go-sample.svg?branch=master)](https://travis-ci.org/hwdavr/go-sample)
+[![codecov](https://codecov.io/gh/hwdavr/go-sample/branch/master/graph/badge.svg)](https://codecov.io/gh/hwdavr/go-sample)
+[![Go Report Card](https://goreportcard.com/badge/github.com/hwdavr/go-sample)](https://goreportcard.com/report/github.com/hwdavr/go-sample)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/hwdavr/perfmon/blob/master/LICENSE)
 
 A sample layout for Go application projects with the real code.
 
@@ -32,7 +32,7 @@ Ideas used to create the architecture and structure:
 ## Installation
 
 ```
-git clone https://github.com/zitryss/perfmon.git
+git clone https://github.com/hwdavr/perfmon.git
 ```
 
 

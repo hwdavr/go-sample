@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	. "github.com/zitryss/perfmon/domain"
-	"github.com/zitryss/perfmon/infrastructure/database"
-	. "github.com/zitryss/perfmon/internal/testing"
+	. "github.com/hwdavr/perfmon/domain"
+	"github.com/hwdavr/perfmon/infrastructure/database"
+	. "github.com/hwdavr/perfmon/internal/testing"
 )
 
 var (

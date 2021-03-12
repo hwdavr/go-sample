@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/zitryss/perfmon/delivery/http"
-	"github.com/zitryss/perfmon/domain"
-	"github.com/zitryss/perfmon/infrastructure/database"
-	"github.com/zitryss/perfmon/internal/log"
+	"github.com/hwdavr/perfmon/delivery/http"
+	"github.com/hwdavr/perfmon/domain"
+	"github.com/hwdavr/perfmon/infrastructure/database"
+	"github.com/hwdavr/perfmon/internal/log"
 )
 
 func main() {

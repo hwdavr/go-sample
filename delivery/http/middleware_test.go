@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	. "github.com/zitryss/perfmon/internal/testing"
+	. "github.com/hwdavr/perfmon/internal/testing"
 )
 
 func TestNoDirListing(t *testing.T) {

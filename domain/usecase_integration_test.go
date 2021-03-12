@@ -8,8 +8,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	. "github.com/zitryss/perfmon/domain"
-	"github.com/zitryss/perfmon/infrastructure/database"
+	. "github.com/hwdavr/perfmon/domain"
+	"github.com/hwdavr/perfmon/infrastructure/database"
 )
 
 var (

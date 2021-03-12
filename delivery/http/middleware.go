@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/zitryss/perfmon/internal/log"
+	"github.com/hwdavr/perfmon/internal/log"
 )
 
 func recovery(h http.Handler) http.Handler {

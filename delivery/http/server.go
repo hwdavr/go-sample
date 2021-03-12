@@ -7,8 +7,8 @@ import (
 	"os"
 	"os/signal"
 
-	. "github.com/zitryss/perfmon/domain"
-	"github.com/zitryss/perfmon/internal/log"
+	. "github.com/hwdavr/perfmon/domain"
+	"github.com/hwdavr/perfmon/internal/log"
 )
 
 const (
