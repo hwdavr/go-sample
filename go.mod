@@ -11,6 +11,6 @@ require (
 	github.com/morikuni/aec v1.0.0 // indirect
 	github.com/pkg/errors v0.8.0
 	github.com/wacul/ptr v1.0.0 // indirect
-	golang.org/x/sys v0.0.0-20210217105451-b926d437f341 // indirect
+	golang.org/x/sys v0.0.0-20210309074719-68d13333faf2 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )

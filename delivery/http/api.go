@@ -34,6 +34,8 @@ func (a *api) upload() httprouter.Handle {
 	}
 	input := func(r *http.Request) (context.Context, *request, error) {
 		req := &request{}
+		log.Info("Uploading:")
+		log.Info(req)
 		err := json.NewDecoder(r.Body).Decode(req)
 		if err != nil {
 			err = errors.WithStack(err)
@@ -62,6 +64,7 @@ func (a *api) upload() httprouter.Handle {
 		ctx = WithCreatedBy(ctx, r.RemoteAddr)
 		return ctx, req, nil
 	}
+
 	process := func(ctx context.Context, req *request) error {
 		job := &Job{}
 		job.Product = req.Product

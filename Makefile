@@ -14,7 +14,7 @@ version:
 	
 .PHONY: build
 build:
-	@go build -v
+	@go build -ldflags='-w'
 
 .PHONY: run
 run:

@@ -3,7 +3,6 @@ info:
     title: perfmon
     version: 0.1.0
 servers:
-    - url: 'http://159.89.47.233'
     - url: 'http://localhost'
 paths:
     /:

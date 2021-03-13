@@ -17,7 +17,7 @@ const (
 var (
 	l = &logger{
 		Logger: log.New(ioutil.Discard, "", log.LstdFlags),
-		level:  info,
+		level:  debug,
 	}
 )
 
